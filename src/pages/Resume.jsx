@@ -6,8 +6,8 @@ const Resume = () => {
   const handleDownload = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/BhumikaResume.pdf`; // PDF should be in public folder
-    link.download = 'BhumikaResume.pdf';
+    link.href = `${process.env.PUBLIC_URL}/BhumikaResume2.pdf`; // PDF should be in public folder
+    link.download = 'BhumikaResume2.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -47,22 +47,31 @@ const Resume = () => {
 
   const education = [
     {
-      degree: 'B.Tech – Computer Science and Engineering',
-      school: 'LNCTS, Lakshmi Narain College of Technology & Science',
-      period: '2023 – 2027',
-      location: 'Bhopal, Madhya Pradesh',
+      degree: 'Bachelor’s in Computer Science',
+      school: 'Lakshmi Narain College of Technology and Science Bhopal (M.P)',
+      period: '2023 - 2027',
+      location: 'Bhopal, India',
       achievements: [
         'Strong foundation in programming fundamentals and front-end development',
         'Coursework includes Data Structures & Algorithms and Object-Oriented Programming'
       ]
     },
     {
-      degree: 'High School (CBSE)',
-      school: 'CBSE Board',
-      period: 'Completed',
-      location: 'India',
+      degree: 'Higher Secondary Education (12th)',
+      school: 'Green Valley Public School Balaghat (M.P) CBSE Board',
+      period: '2023',
+      location: 'Balaghat, India',
       achievements: [
-        '10th CBSE Board – 90%','12th (PCM) CBSE Board – 82.8%'
+        'Completed senior secondary with core STEM subjects'
+      ]
+    },
+    {
+      degree: 'Projects & Learning',
+      school: 'Self-Directed Learning',
+      period: 'Year - Present 2025',
+      location: 'Bhopal, India',
+      achievements: [
+        'Built responsive websites and web applications using modern technologies.'
       ]
     }
   ];
@@ -76,7 +85,7 @@ const Resume = () => {
   const skills = {
     'Programming': ['C', 'Java', 'Data Structures & Algorithms', 'OOP'],
     'Frontend': ['HTML', 'CSS', 'JavaScript', 'ReactJS'],
-    'Tools & Others': []
+    'Tools & Others': ['Git', 'GitHub', 'VS Code', 'npm', 'Node.js (basics)', 'Chrome DevTools', 'Figma (basics)']
   };
 
   const extracurricular = [
@@ -125,7 +134,7 @@ const Resume = () => {
                 <FaDownload />
                 Download PDF
               </button>
-              <button className="btn btn-secondary" onClick={() => window.open(`${process.env.PUBLIC_URL}/BhumikaResume.pdf`, '_blank')}>
+              <button className="btn btn-secondary" onClick={() => window.open(`${process.env.PUBLIC_URL}/BhumikaResume2.pdf`, '_blank')}>
                 <FaEye />
                 View PDF
               </button>

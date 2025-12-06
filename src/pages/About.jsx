@@ -17,28 +17,28 @@ const About = () => {
       type: 'education',
       icon: <FaGraduationCap />,
       title: "Bachelor’s in Computer Science",
-      organization: 'Your University',
-      period: 'Year - Year',
+      organization: 'Lakshmi Narain College of Technology and Science Bhopal (M.P)',
+      period: '2023 - 2027',
       description: 'Focused on programming, data structures, and web development.',
-      location: 'Your City, Country'
+      location: 'Bhopal, India'
     },
     {
       type: 'education',
       icon: <FaGraduationCap />,
       title: 'Higher Secondary Education (12th)',
-      organization: 'Your Board',
-      period: 'Year - Year',
+      organization: 'Green Valley Public School Balaghat (M.P) CBSE Board',
+      period: '2023',
       description: 'Completed senior secondary with core STEM subjects.',
-      location: 'Your Country'
+      location: 'Balaghat, India'
     },
     {
       type: 'achievement',
       icon: <FaAward />,
       title: 'Projects & Learning',
       organization: 'Self-Directed Learning',
-      period: 'Year - Present',
+      period: 'Year - Present 2025',
       description: 'Built responsive websites and web applications using modern technologies.',
-      location: 'Your City, Country'
+      location: 'Bhopal, India'
     }
   ];
 
