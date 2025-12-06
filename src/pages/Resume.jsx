@@ -6,8 +6,8 @@ const Resume = () => {
   const handleDownload = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/resume.pdf`; // PDF should be in public folder
-    link.download = 'Arnav_Singh_Rawat_Resume.pdf';
+    link.href = `${process.env.PUBLIC_URL}/BhumikaResume.pdf`; // PDF should be in public folder
+    link.download = 'BhumikaResume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -15,163 +15,85 @@ const Resume = () => {
 
   const projects = [
     {
-      title: 'Portfolio Website',
-      tech: 'React.js, CSS3, JavaScript, EmailJS, React Router',
-      period: '2024',
+      title: 'Portfolio Website | ReactJS',
+      tech: 'ReactJS, HTML, CSS, JavaScript',
+      period: '2025',
       links: {
-        source: 'https://github.com/ArnavSinghRawat18/Portfolio-Website',
-        live: 'https://686940481f7b30000842a400--arnavsinghrawatportfolio.netlify.app'
+        source: 'https://github.com/bhumi12005/portfolio-website',
+        live: 'https://bhumiportfolio-website.netlify.app'
       },
       description: [
-        'Developed a modern, responsive portfolio website showcasing skills and projects with animated coding workspace',
-        'Integrated real-time weather API and daily inspiration quotes for enhanced user engagement',
-        'Implemented smooth scroll animations, dark/light theme toggle, and mobile-first responsive design',
-        'Built contact form with EmailJS integration for direct communication functionality',
-        'Deployed on Netlify with continuous integration and optimized performance for all device types'
+        'Built a responsive and modern personal portfolio using React with a clean, component-based architecture.',
+        'Designed intuitive UI/UX with smooth navigation using React Router and reusable components.',
+        'Optimized performance and layout for all screen sizes while maintaining a consistent theme.'
       ]
     },
     {
-      title: '2048 Game',
-      tech: 'HTML5, CSS3, JavaScript, Responsive Design, Touch Controls',
-      period: '2024',
+      title: 'Password Generator | ReactJS',
+      tech: 'ReactJS, HTML, CSS, JavaScript',
+      period: '2025',
       links: {
-        source: 'https://github.com/ArnavSinghRawat18/2048-game',
-        live: 'https://lnkd.in/e7sJYN_7'
+        source: 'https://github.com/bhumi12005/PasswordGenerator',
+        live: 'https://bhumi-password-gen.netlify.app/'
       },
       description: [
-        'Developed a fully responsive and interactive clone of the classic 2048 game, playable on both desktop and mobile devices',
-        'Implemented core game mechanics such as dynamic tile merging, score tracking, and random tile generation using vanilla JavaScript',
-        'Added touch gesture support and swipe controls for mobile users, enhancing accessibility and user experience',
-        'Designed an intuitive UI/UX with dark/light mode toggle, engaging tile animations, and visual feedback using CSS transitions',
-        'Applied modular code practices and event-driven programming to manage gameplay logic and interface updates'
-      ]
-    },
-    {
-      title: 'Password Generator App',
-      tech: 'React.js, Tailwind CSS, Vite, React Hooks',
-      period: '2024',
-      links: {
-        source: 'https://github.com/ArnavSinghRawat18/Password-Generator-using-react',
-        live: 'https://lnkd.in/dg9_e9dx'
-      },
-      description: [
-        'Built a fully responsive password generator with React.js and Tailwind CSS featuring glassmorphism UI design',
-        'Implemented customizable password length (8-32 characters) with toggle options for numbers and special characters',
-        'Added one-click copy to clipboard functionality with toast notifications for better user feedback',
-        'Utilized React hooks (useState, useEffect, useCallback) for state management and performance optimization',
-        'Deployed with Vite for fast development and optimized build performance'
-      ]
-    },
-    {
-      title: 'Form Validation with Password Toggle',
-      tech: 'HTML5, CSS3, JavaScript, DOM Manipulation, RegEx',
-      period: '2024',
-      links: {
-        source: 'https://github.com/ArnavSinghRawat18/Form-validation-using-regax',
-        live: 'https://formvalidationarnav.netlify.app/'
-      },
-      description: [
-        'Created a responsive registration form with real-time input validation using vanilla JavaScript and regular expressions',
-        'Implemented comprehensive error handling for empty fields, invalid email formats, and password strength requirements',
-        'Added show/hide password toggle functionality with eye icon for enhanced user experience',
-        'Designed clean UI with success redirect and form reset functionality upon successful validation',
-        'Applied modern form validation techniques and accessibility best practices'
-      ]
-    },
-    {
-      title: 'Responsive News Website',
-      tech: 'HTML5, CSS3, Responsive Design, CSS Grid, Flexbox',
-      period: '2024',
-      links: {
-        source: 'https://github.com/ARNAVtitan/News_website',
-        live: 'https://arnavnews.netlify.app/'
-      },
-      description: [
-        'Developed a fully responsive news website using HTML and CSS, featuring sleek design and seamless user experience',
-        'Demonstrated advanced CSS layout techniques including CSS Grid and Flexbox for optimal content presentation',
-        'Implemented responsive design principles ensuring compatibility across various devices and screen sizes',
-        'Created modern web design aesthetics with clean typography, proper spacing, and intuitive navigation',
-        'Adhered to web development best practices for semantic HTML structure and maintainable CSS code'
+        'Built a secure and responsive password generator web app with customizable strength options.',
+        'Implemented randomized generation of uppercase/lowercase letters, numbers, and symbols.',
+        'Added interactive UI controls: length slider, toggles, and one-click copy-to-clipboard.',
+        'Designed clean, modern UI/UX with real-time updates, visual feedback, and smooth transitions.'
       ]
     }
   ];
 
   const education = [
     {
-      degree: 'B.Tech - Computer Science and Engineering',
+      degree: 'B.Tech – Computer Science and Engineering',
       school: 'LNCTS, Lakshmi Narain College of Technology & Science',
-      period: '2023 - 2027',
+      period: '2023 – 2027',
       location: 'Bhopal, Madhya Pradesh',
       achievements: [
-        'Currently pursuing Bachelor of Technology in Computer Science',
-        'Focused on programming languages, data structures, and web development',
-        'Active participant in college technical activities'
+        'Strong foundation in programming fundamentals and front-end development',
+        'Coursework includes Data Structures & Algorithms and Object-Oriented Programming'
       ]
     },
     {
-      degree: 'High School Education',
+      degree: 'High School (CBSE)',
       school: 'CBSE Board',
-      period: '2021 - 2023',
+      period: 'Completed',
       location: 'India',
       achievements: [
-        '12th (PCM) CBSE Board - 82%',
-        '10th CBSE Board - 90%'
+        '10th CBSE Board – 90%','12th (PCM) CBSE Board – 82.8%'
       ]
     }
   ];
 
   const certifications = [
-    {
-      name: 'NEC \'24 Basic Track - Finalist',
-      issuer: 'E-Cell, IIT Bombay',
-      year: '2025',
-      credentialId: 'ecell2021'
-    },
-    {
-      name: 'National Science Olympiad Participation',
-      issuer: 'National Science Foundation',
-      year: '2025'
-    },
-    {
-      name: 'Data Structures and Algorithms',
-      issuer: 'Coursera',
-      year: '2024'
-    },
-    {
-      name: 'JavaScript Essential',
-      issuer: 'Cisco Networking Academy',
-      year: '2024'
-    }
+    { name: 'Data Structures and Algorithms', issuer: 'Coursera', year: '' },
+    { name: 'JavaScript Essentials', issuer: 'Cisco Networking Academy', year: '' },
+    { name: 'Networking Essentials', issuer: 'Cisco Networking Academy', year: '' }
   ];
 
   const skills = {
-    'Programming': ['C', 'C++', 'JavaScript', 'Data Structures & Algorithms', 'Object-Oriented Programming'],
-    'Frontend': ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Responsive Design'],
-    'Tools & Others': ['Git', 'Video Editing', 'Problem Solving', 'Web Development']
+    'Programming': ['C', 'Java', 'Data Structures & Algorithms', 'OOP'],
+    'Frontend': ['HTML', 'CSS', 'JavaScript', 'ReactJS'],
+    'Tools & Others': []
   };
 
   const extracurricular = [
     {
-      category: 'Martial Arts',
-      activities: [
-        'Karate: Blue belt holder',
-        'District Bronze medalist',
-        'State level player'
-      ]
-    },
-    {
-      category: 'Sports',
-      activities: [
-        'Cricket: Part of inter-school team',
-        'Badminton: College level player'
-      ]
-    },
-    {
       category: 'Communication & Leadership',
       activities: [
-        'Won multiple debate competitions',
-        'Recognized as a good public speaker',
+        'Won many debate competitions and recognized as a good speaker',
         'Strong communication skills'
+      ]
+    },
+    {
+      category: 'Fine Arts',
+      activities: [
+        'Sketching',
+        'Painting',
+        'Rangoli',
+        'Multiple certificates in fine arts'
       ]
     }
   ];
@@ -185,25 +107,25 @@ const Resume = () => {
             <h1 className="heading-1">My <span className="text-gradient">Resume</span></h1>
             <div className="personal-info">
               <h2>Bhumika Sonekar</h2>
-              <p>Bhopal, MP, India</p>
+              <p>Bhopal, Madhya Pradesh, India</p>
               <div className="contact-links">
-                <span>📧 bhumikasonekar3@gmail.com</span>
-                <span>📱 1234567890</span>
+                <span>📧 bhumikasonekar12@gmail.com</span>
+                <span>📱 +91-8305740071</span>
                 <a href="https://www.linkedin.com/in/bhumika-sonekar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://github.com/bhumi12005" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://instagram.com/bhumi.12" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://leetcode.com/u/Bhumika_Sonekar/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+                <a href="https://bhumiportfolio-website.netlify.app" target="_blank" rel="noopener noreferrer">Portfolio</a>
               </div>
             </div>
             <p className="resume-description">
-              Computer Science Engineering student with strong programming fundamentals and web development skills. Passionate about learning new technologies and building innovative projects.
+              Motivated Computer Science undergraduate skilled in front-end development and programming fundamentals. Experienced in building responsive, user-friendly web applications using ReactJS, JavaScript, and modern UI/UX practices. Strong problem-solving ability with hands-on project experience.
             </p>
             <div className="resume-actions">
               <button className="btn btn-primary" onClick={handleDownload}>
                 <FaDownload />
                 Download PDF
               </button>
-              <button className="btn btn-secondary" onClick={() => window.open(`${process.env.PUBLIC_URL}/resume.pdf`, '_blank')}>
+              <button className="btn btn-secondary" onClick={() => window.open(`${process.env.PUBLIC_URL}/BhumikaResume.pdf`, '_blank')}>
                 <FaEye />
                 View PDF
               </button>
