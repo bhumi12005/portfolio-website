@@ -7,8 +7,34 @@ const images = {
   placeholder: '/images/projects/sample-portfolio.svg',
   'simon-game': '/images/projects/SimonSay.png',
   PasswordGenerator: '/images/projects/PasswordGenerator.png',
-  Project1: '/images/projects/campus.png',
+  Project1: '/images/projects/Campus.png',
   samplePortfolio: '/images/projects/Portfolio.png'
+};
+
+// Stable configuration maps (moved outside component to avoid useMemo missing deps)
+const REPO_WHITELIST = ['simon-game', 'PasswordGenerator', 'Project1'].map(n => n.toLowerCase());
+
+const TITLE_MAP = {
+  Project1: 'Campus Lost and Found'
+};
+
+const LIVE_MAP = {
+  PasswordGenerator: 'https://bhumi-password-gen.netlify.app/',
+  'simon-game': 'https://simonsay-gamee.netlify.app/',
+  Project1: 'https://69257d79c3f7103a4befebc8--zingy-cactus-6f35c8.netlify.app/'
+};
+
+const DESCRIPTION_MAP = {
+  PasswordGenerator: 'A secure password generator that creates strong, customizable passwords instantly.',
+  'simon-game': 'A fun memory-based Simon game that challenges users to repeat increasingly complex color sequences.',
+  Project1: 'A simple platform that helps students report, search, and retrieve lost items on campus.'
+};
+
+// Custom technology tags to show alongside detected language
+const TECH_MAP = {
+  PasswordGenerator: ['JavaScript', 'React', 'Tailwind CSS'],
+  'simon-game': ['HTML', 'CSS', 'JavaScript'],
+  Project1: ['JavaScript', 'React', 'Tailwind CSS']
 };
 
 const Projects = () => {
@@ -73,42 +99,16 @@ const Projects = () => {
   ];
 
   const featuredProjects = projects.filter(project => project.featured);
-  const repoWhitelist = useMemo(() => (
-    ['simon-game', 'PasswordGenerator', 'Project1'].map(n => n.toLowerCase())
-  ), []);
-
-  const titleMap = {
-    Project1: 'Campus Lost and Found'
-  };
-
-  const liveMap = {
-    PasswordGenerator: 'https://bhumi-password-gen.netlify.app/',
-    'simon-game': 'https://simonsay-gamee.netlify.app/',
-    Project1: 'https://69257d79c3f7103a4befebc8--zingy-cactus-6f35c8.netlify.app/'
-  };
-
-  const descriptionMap = {
-    PasswordGenerator: 'A secure password generator that creates strong, customizable passwords instantly.',
-    'simon-game': 'A fun memory-based Simon game that challenges users to repeat increasingly complex color sequences.',
-    Project1: 'A simple platform that helps students report, search, and retrieve lost items on campus.'
-  };
-
-  // Custom technology tags to show alongside detected language
-  const techMap = {
-    PasswordGenerator: ['JavaScript', 'React', 'Tailwind CSS'],
-    'simon-game': ['HTML', 'CSS', 'JavaScript'],
-    Project1: ['JavaScript', 'React', 'Tailwind CSS']
-  };
 
   const repoCards = useMemo(() => {
     return repos
-      .filter(r => repoWhitelist.includes((r.name || '').toLowerCase()))
+      .filter(r => REPO_WHITELIST.includes((r.name || '').toLowerCase()))
       .map((r) => ({
       id: r.id,
-       title: titleMap[r.name] || r.name,
-        description: descriptionMap[r.name] || r.description || 'No description provided.',
+       title: TITLE_MAP[r.name] || r.name,
+        description: DESCRIPTION_MAP[r.name] || r.description || 'No description provided.',
        image: images[r.name] || images.placeholder,
-        technologies: techMap[r.name] || [r.language || 'Unknown'],
+        technologies: TECH_MAP[r.name] || [r.language || 'Unknown'],
       category: (r.language || 'learning').toLowerCase(),
       categories: [
         (r.language || 'learning').toLowerCase(),
@@ -116,7 +116,7 @@ const Projects = () => {
         ...(r.name === 'simon-game' ? ['interactive'] : [])
       ],
       githubUrl: r.html_url,
-        liveUrl: liveMap[r.name] || r.homepage || '',
+        liveUrl: LIVE_MAP[r.name] || r.homepage || '',
       featured: false,
       stargazers_count: r.stargazers_count || 0
     }));

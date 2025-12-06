@@ -1,3 +1,18 @@
+## Netlify Deployment
+
+- Build command: `npm run build`
+- Publish directory: `build`
+- SPA routing: ensure `public/_redirects` contains `/* /index.html 200` (already added)
+- Optional headers: managed via `netlify.toml` (cache + security)
+
+### Quick Deploy Steps
+- Create a new site in Netlify → "Import from Git" → select `bhumi12005/portfolio-website`
+- Set build command to `npm run build` and publish directory to `build`
+- Trigger a deploy. React Router routes will work due to redirects.
+
+### Common Fixes
+- If assets don’t update, clear cache or bump filenames; immutable caching is enabled for `/assets/*`.
+- For 404 on deep links, confirm `_redirects` or `netlify.toml` redirects are present.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

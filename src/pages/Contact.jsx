@@ -59,17 +59,22 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     const validationError = validateForm();
     if (validationError) {
       setSubmitStatus({ type: 'error', message: validationError });
+      setIsSubmitting(false);
       return;
     }
-    // For now, just show a success message and provide direct email link
-    setSubmitStatus({
-      type: 'success',
-      message: 'Thanks! Please reach me directly via email or social links.'
-    });
-    setFormData({ name: '', email: '', message: '' });
+    // Simulate a short async submit and show a success message
+    setTimeout(() => {
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thanks! Please reach me directly via email or social links.'
+      });
+      setFormData({ name: '', email: '', message: '' });
+      setIsSubmitting(false);
+    }, 500);
   };
 
   return (
